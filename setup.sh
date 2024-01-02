@@ -14,3 +14,13 @@ else
     echo "Snippet already in .bashrc"
 fi
 
+NVIM_SETTINGS_SOURCE_FOLDER=~/ubuntusettings/nvim
+NVIM_SETTINGS_TARGET_FOLDER=~/.config/nvim
+
+if test -d $NVIM_SETTINGS_TARGET_FOLDER; then
+    echo "nvim config directory exists."
+else
+    echo 'Creating nvim settings symlink'
+    ln -s $NVIM_SETTINGS_SOURCE_FOLDER $NVIM_SETTINGS_TARGET_FOLDER
+fi
+
