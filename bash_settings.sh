@@ -7,6 +7,7 @@ alias t='tree'
 alias t2='tree -L 2'
 alias t3='tree -L 3'
 alias t4='tree -L 4'
+alias lg='lazygit'
 
 if [ -z "$SSH_AUTH_SOCK" ]; then
 	eval $(ssh-agent -s)
