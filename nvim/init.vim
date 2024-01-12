@@ -49,12 +49,11 @@ call plug#begin()
  Plug 'hrsh7th/cmp-path'             " Path completions
  Plug 'hrsh7th/cmp-cmdline'          " Cmdline completions
 
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'SirVer/ultisnips'
 call plug#end()
 
 lua << EOF
 require'lspconfig'.gopls.setup{}
+require'lspconfig'.bashls.setup{}
 EOF
 
 colorscheme nightfly
