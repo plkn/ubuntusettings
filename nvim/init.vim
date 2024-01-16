@@ -33,6 +33,12 @@ set backupdir=~/.cache/vim " Directory to store backup files.
 nnoremap <F2> :NERDTreeToggle<CR>
 command! Nh nohlsearch
 
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
 call plug#begin()
  Plug 'scrooloose/nerdtree'
  Plug 'preservim/nerdcommenter'
@@ -51,6 +57,9 @@ call plug#begin()
  Plug 'hrsh7th/cmp-cmdline'          " Cmdline completions
 
  Plug 'vim-airline/vim-airline'
+
+ Plug 'nvim-lua/plenary.nvim'
+ Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.x' }
 call plug#end()
 
 lua << EOF
