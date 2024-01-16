@@ -39,6 +39,9 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
+" setup mapping to call :LazyGit
+nnoremap <silent> <leader>gg :LazyGit<CR>
+
 call plug#begin()
  Plug 'scrooloose/nerdtree'
  Plug 'preservim/nerdcommenter'
@@ -47,7 +50,8 @@ call plug#begin()
  Plug 'ryanoasis/vim-devicons'
  Plug 'honza/vim-snippets'
  Plug 'mhinz/vim-startify'
- 
+ Plug 'kdheepak/lazygit.nvim'
+
  " autocompletion
  Plug 'neovim/nvim-lspconfig'
  Plug 'hrsh7th/nvim-cmp'             " Autocompletion plugin
