@@ -52,6 +52,10 @@ call plug#begin()
  Plug 'mhinz/vim-startify'
  Plug 'kdheepak/lazygit.nvim'
 
+ Plug 'ldelossa/litee.nvim'
+ Plug 'ldelossa/litee-bookmarks.nvim'
+ Plug 'ldelossa/litee-symboltree.nvim'
+
  " autocompletion
  Plug 'neovim/nvim-lspconfig'
  Plug 'hrsh7th/nvim-cmp'             " Autocompletion plugin
@@ -69,6 +73,15 @@ call plug#end()
 lua << EOF
 require'lspconfig'.gopls.setup{}
 require'lspconfig'.bashls.setup{}
+-- configure the litee.nvim library 
+require('litee.lib').setup({})
+-- configure litee-bookmarks.nvim
+require('litee.bookmarks').setup({})
+-- configure litee-symboltree.nvim
+require('litee.symboltree').setup({})
+vim.lsp.handlers['textDocument/documentSymbol'] = vim.lsp.with(
+            require('litee.lsp.handlers').ws_lsp_handler(), {}
+)
 EOF
 
 colorscheme nightfly
