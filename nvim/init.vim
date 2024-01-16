@@ -50,6 +50,7 @@ call plug#begin()
  Plug 'hrsh7th/cmp-path'             " Path completions
  Plug 'hrsh7th/cmp-cmdline'          " Cmdline completions
 
+ Plug 'vim-airline/vim-airline'
 call plug#end()
 
 lua << EOF
