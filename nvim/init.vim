@@ -86,6 +86,9 @@ EOF
 
 " macros
 let @1 = '^I[ ] ' " puts [ ] in the beginning of a line (for todo list)
-let @2 = '0lrx'   " marcs [ ] with [x] in the beginning of a line
+let @2 = '0lrx$'   " marcs [ ] with [x] in the beginning of a line
+
+nmap <Leader>1 @1
+nmap <Leader>2 @2
 
 colorscheme nightfly
