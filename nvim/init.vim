@@ -64,10 +64,11 @@ call plug#begin()
  Plug 'hrsh7th/cmp-path'             " Path completions
  Plug 'hrsh7th/cmp-cmdline'          " Cmdline completions
 
- Plug 'vim-airline/vim-airline'
-
- Plug 'nvim-lua/plenary.nvim'
  Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' }
+
+ Plug 'vim-airline/vim-airline'
+ Plug 'nvim-lua/plenary.nvim'
+ Plug 'lambdalisue/battery.vim'
 call plug#end()
 
 lua << EOF
@@ -78,10 +79,13 @@ require('litee.lib').setup({})
 -- configure litee-bookmarks.nvim
 require('litee.bookmarks').setup({})
 -- configure litee-symboltree.nvim
-require('litee.symboltree').setup({})
-vim.lsp.handlers['textDocument/documentSymbol'] = vim.lsp.with(
-            require('litee.lsp.handlers').ws_lsp_handler(), {}
-)
+-- require('litee.symboltree').setup({})
+-- vim.lsp.handlers['textDocument/documentSymbol'] = vim.lsp.with(
+--             require('litee.lsp.handlers').ws_lsp_handler(), {})
 EOF
+
+" macros
+let @1 = '^I[ ] ' " puts [ ] in the beginning of a line (for todo list)
+let @2 = '0lrx'   " marcs [ ] with [x] in the beginning of a line
 
 colorscheme nightfly
