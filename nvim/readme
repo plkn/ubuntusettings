@@ -9,6 +9,6 @@ curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --c
 
 go install golang.org/x/tools/gopls@latest
 
-## bash
+## bash 0
 
 npm i -g bash-language-server
