@@ -1,5 +1,17 @@
 #!/bin/bash
 
+install_ripgrep() {
+  echo "Installing ripgrep..."
+  result=$(apt install ripgrep 2>&1)
+
+  if [ $? -eq 0 ]; then
+    result=""
+  else
+    echo "Failed to install ripgrep"
+    echo "$result"
+  fi
+}
+
 install_golps() {
     echo "Installing golang LSP..."
 
@@ -27,6 +39,7 @@ install_bash_lsp() {
 
 }
 
+install_ripgrep
 install_golps
 install_bash_lsp
 echo "LSPs installation complete"
