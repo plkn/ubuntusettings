@@ -12,3 +12,8 @@ go install golang.org/x/tools/gopls@latest
 ## bash 0
 
 npm i -g bash-language-server
+
+
+# TODO
+[ ] Add commands to install dap and delve plugins (some golang dependencies)
+[ ] Remove vim plug installation instructions
