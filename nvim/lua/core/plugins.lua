@@ -18,7 +18,6 @@ return require('packer').startup(function(use)
 	use 'nvim-tree/nvim-web-devicons'
 	use 'nvim-lualine/lualine.nvim'
 	use 'nvim-treesitter/nvim-treesitter'
-  use 'chentoast/marks.nvim'
 
 	use {
 		'nvim-telescope/telescope.nvim',
@@ -38,7 +37,7 @@ return require('packer').startup(function(use)
     "folke/which-key.nvim",
     config = function()
       vim.o.timeout = true
-      vim.o.timeoutlen = 300
+      vim.o.timeoutlen = 900
       require("which-key").setup {
       }
     end
@@ -46,6 +45,7 @@ return require('packer').startup(function(use)
 
   use 'mfussenegger/nvim-dap'
   use 'sebdah/vim-delve'
+  use 'chentoast/marks.nvim'
 
   if packer_bootstrap then
     require('packer').sync()
