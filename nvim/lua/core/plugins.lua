@@ -18,11 +18,13 @@ return require('packer').startup(function(use)
 	use 'nvim-tree/nvim-web-devicons'
 	use 'nvim-lualine/lualine.nvim'
 	use 'nvim-treesitter/nvim-treesitter'
+
 	use {
 		'nvim-telescope/telescope.nvim',
 		tag = '0.1.4',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
+
 	use({
 			"kdheepak/lazygit.nvim",
 			-- optional for floating window border decoration
@@ -30,6 +32,7 @@ return require('packer').startup(function(use)
 					"nvim-lua/plenary.nvim",
 			},
 	})
+  
   use {
     "folke/which-key.nvim",
     config = function()
@@ -40,7 +43,11 @@ return require('packer').startup(function(use)
     end
   }
 
+  use 'mfussenegger/nvim-dap'
+  use 'sebdah/vim-delve'
+
   if packer_bootstrap then
     require('packer').sync()
   end
+
 end)
