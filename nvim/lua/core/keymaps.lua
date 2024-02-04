@@ -1,5 +1,6 @@
 vim.keymap.set('n','<leader>h', ':nohlsearch<CR>')
 vim.keymap.set('n', '<c-s>', '<cmd>write<CR>')
+vim.keymap.set('i', '<c-s>', '<esc><cmd>write<CR>')
 
 -- TODO list
 vim.keymap.set('n','<leader>1', '@1') -- see macros.lua
