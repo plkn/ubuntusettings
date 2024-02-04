@@ -7,6 +7,7 @@ vim.keymap.set('n','<leader>2', '@2') -- see macros.lua
 
 -- close vim
 vim.keymap.set('n', '<C-M-q>', ':qa<CR>')
+vim.keymap.set('n', '<F10>', ':qa<CR>')
 
 -- move lines up and down
 vim.keymap.set('n', '<A-j>', ':m .+1<CR>==')
